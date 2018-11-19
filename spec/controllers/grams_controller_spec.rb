@@ -28,6 +28,7 @@ RSpec.describe GramsController, type: :controller do
     end
   end
   
+    
   describe "grams#index action" do
     it "should successfully show the page" do
       get :index
