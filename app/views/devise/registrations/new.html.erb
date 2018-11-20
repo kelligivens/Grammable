@@ -1,4 +1,9 @@
+ <br />
+ <br />
+
+<div class="booyah-box col-8 offset-2">
 <h2>Sign up</h2>
+  <br />
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -15,11 +20,12 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-  </div>
-
+ </div>
+  <br />
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <%= f.button :submit, "Sign in", class: 'btn btn-primary' %>
   </div>
 <% end %>
-
+<br />
 <%= render "devise/shared/links" %>
+</div>
