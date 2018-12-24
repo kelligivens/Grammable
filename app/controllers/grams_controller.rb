@@ -7,6 +7,7 @@ class GramsController < ApplicationController
 
   def new
     @gram = Gram.new
+    @picture = Picture.new
   end
 
   def create
@@ -22,6 +23,8 @@ class GramsController < ApplicationController
   def show
     @gram = Gram.find_by_id(params[:id])
     return render_not_found if @gram.blank?
+    
+    @picture = Picture.new
   end
 
   def edit
